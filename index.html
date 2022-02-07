@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Tetris Game JS</title>
+    <style>
+        #score{
+            background-color: blue;
+            display: inline-block;
+            overflow: hidden;
+            color: white;
+            border-radius: 5px;
+            border: 3px solid black;
+        }
+        div{
+            font-size: 25px;
+            font-weight: bold;
+            font-family: monospace;
+            text-align: center;
+        }
+        canvas{
+            display: block;
+            margin:0 auto;
+            border-radius: 10px;
+            border: 5px solid black;
+            box-shadow: 5px 6px #a3cfcd;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/0b6d8e7b56.js" crossorigin="anonymous"></script>
+</head>
+<body bgcolor="#111827">
+<div class="Parent" style="color: white; height: 100%; width: 100%;">
+   <div>TETRIS By <b>Saptarshi Dey</b></div><br>
+   <div>
+        <div id="score">Score : 0</div>
+    </div>
+    <canvas id="tetris"></canvas> <br>
+    <button onClick="Left()"><i class="fas fa-chevron-left"></i></button>
+    <button onClick="Rotate()"><i class="fas fa-circle"></i></button>
+    <button onClick="Right()"><i class="fas fa-chevron-right"></i></button><br>
+    <button onClick="Down()"><i class="fas fa-chevron-down"></i></button>
+    </div>
+    <script src="tetrominoes.js"></script>
+    <script src="tetris.js"></script>
+</div>
+</body>
+</html>
