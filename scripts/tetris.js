@@ -167,7 +167,8 @@ Piece.prototype.lock = function(){
             // pieces to lock on top = game over
             if(this.y + r < 0){
                 alert("Game Over");
-                var audio3=new Audio("Game Over.mp3"); audio3.play();
+                var audio3=new Audio("../sound/Game Over.mp3"); 
+                audio3.play();
                 // stop request animation frame
                 gameOver = true;
                 break;
@@ -183,7 +184,8 @@ Piece.prototype.lock = function(){
             isRowFull = isRowFull && (board[r][c] != VACANT);
         }
         if(isRowFull){
-            var audio=new Audio("Scored.mp3"); audio.play();
+            var audio=new Audio("../sound/Scored.mp3");
+            audio.play();
             // if the row is full
             // we move down all the rows above it
             for( y = r; y > 1; y--){
@@ -260,8 +262,8 @@ function Left(){
     dropStart = Date.now();
 }
 function Rotate(){
-    var audio2=new Audio("Rotate.mp3"); audio2.play();
-    p.rotate();
+    var audio2=new Audio("../sound/Rotate.mp3"); 
+    audio2.play(); p.rotate();
     dropStart = Date.now();
 }
 function Right(){
@@ -269,8 +271,8 @@ function Right(){
     dropStart = Date.now();
 }
 function Down(){ p.moveDown(); }
-// drop the piece every 1sec
 
+// drop the piece every 1sec
 let dropStart = Date.now();
 let gameOver = false;
 function drop(){
@@ -283,25 +285,4 @@ function drop(){
     if( !gameOver){
         requestAnimationFrame(drop);
     }
-}
-
-drop();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}   drop();
